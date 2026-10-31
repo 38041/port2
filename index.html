@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alessa Rovigatti | Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de Alessa Rovigatti, estudante de tecnologia. Conheça meus projetos desenvolvidos, habilidades e formas de contato.">
+  <meta name="author" content="Alessa Rovigatti">
+  <meta name="theme-color" content="#173F78">
+
+  <!-- Open Graph / Meta Compartilhamento -->
+  <meta property="og:title" content="Alessa Rovigatti | Portfólio">
+  <meta property="og:description" content="Estudante de tecnologia — Aprendendo tecnologia e transformando ideias em projetos.">
+  <meta property="og:type" content="website">
+
+  <!-- Tipografia Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navegação Principal -->
+  <header class="site-header" id="header" role="banner">
+    <div class="header-container">
+      <!-- Monograma Autoral AR -->
+      <a href="#inicio" class="brand-monogram" aria-label="Ir para o início do portfólio de Alessa Rovigatti">
+        <svg class="monogram-svg" viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.35"/>
+          <path d="M16 32L21.5 16H23L28.5 32M18 27.5H27" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28.5 24C31 24 32.5 22.5 32.5 20C32.5 17.5 31 16 28.5 16H24M28 24L33 32" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">ALESSA ROVIGATTI</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">INÍCIO</a></li>
+          <li><a href="#sobre" class="nav-link">SOBRE MIM</a></li>
+          <li><a href="#projetos" class="nav-link">PROJETOS</a></li>
+          <li><a href="#contato" class="nav-link">CONTATO</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Header: Alternância de Tema & Hambúrguer Mobile -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo de cor claro/escuro" title="Alternar Modo Claro / Escuro">
+          <span class="theme-icon light-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </span>
+          <span class="theme-icon dark-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Mobile Deslizante -->
+  <aside id="mobile-nav" class="mobile-nav-panel" aria-label="Menu móvel" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">MENU</span>
+      <button id="mobile-close-btn" class="mobile-close-btn" aria-label="Fechar menu de navegação">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#inicio" class="mobile-nav-link">INÍCIO</a></li>
+      <li><a href="#sobre" class="mobile-nav-link">SOBRE MIM</a></li>
+      <li><a href="#projetos" class="mobile-nav-link">PROJETOS</a></li>
+      <li><a href="#contato" class="mobile-nav-link">CONTATO</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <span class="mobile-nav-role">ESTUDANTE DE TECNOLOGIA</span>
+      <span class="mobile-nav-meta">2026 — CAMPINAS & REGIS</span>
+    </div>
+  </aside>
+  <div id="mobile-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <!-- SEÇÃO 1: INÍCIO (HERO CÉU AZUL) -->
+    <section id="inicio" class="hero-section" aria-label="Seção Inicial">
+      <div class="hero-background-media" aria-hidden="true">
+        <img src="assets/images/ceu-azul.jpg" alt="" class="hero-bg-img" loading="eager" fetchpriority="high">
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
+      <!-- Detalhes editoriais laterais discretos -->
+      <div class="hero-lateral hero-lateral-left" aria-hidden="true">
+        <span class="hero-meta-tag">PORTFÓLIO AUTORAL</span>
+        <div class="hero-line"></div>
+      </div>
+
+      <div class="hero-lateral hero-lateral-right" aria-hidden="true">
+        <span class="hero-meta-tag">DISCIPLINA & CRIAÇÃO</span>
+        <div class="hero-line"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-kicker reveal-item">
+          <span class="badge-role">ESTUDANTE DE TECNOLOGIA</span>
+        </div>
+
+        <h1 class="hero-headline reveal-item">
+          <span class="line-name">ALESSA</span>
+          <span class="line-name">ROVIGATTI</span>
+        </h1>
+
+        <p class="hero-tagline reveal-item">
+          Aprendendo tecnologia e transformando ideias em projetos.
+        </p>
+
+        <div class="hero-actions reveal-item">
+          <a href="#projetos" class="btn-primary-editorial">
+            <span>EXPLORAR PROJETOS</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicador vertical de rolagem -->
+      <a href="#transicao" class="hero-scroll-indicator" aria-label="Rolar para a próxima seção">
+        <span class="scroll-text">SCROLL / DESCUBRA</span>
+        <div class="scroll-track">
+          <div class="scroll-thumb"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- TRANSIÇÃO ESCULTURAL ORGÂNICA (AZUL-CLARO ACINZENTADO) -->
+    <section id="transicao" class="transition-sculptural-section" aria-hidden="true">
+      <div class="sculptural-arch-wrap">
+        <div class="sculptural-arch">
+          <div class="arch-inner-quote">
+            <span class="arch-eyebrow">DIREÇÃO EDITORIAL & TÉCNICA</span>
+            <p class="arch-text">
+              Construir experiências digitais que aliem estética contemporânea, rigor de código e usabilidade intencional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: SOBRE MIM (FUNDO OFF-WHITE & BUGANVÍLIAS NATURAIS) -->
+    <section id="sobre" class="about-section" aria-label="Sobre Alessa Rovigatti">
+      <!-- Decoração Floral Buganvília nos cantos -->
+      <div class="floral-accent-top" aria-hidden="true">
+        <img src="assets/images/bougainvillea.jpg" alt="" class="floral-image" loading="lazy">
+      </div>
+
+      <div class="container about-container">
+        <header class="section-header reveal-item">
+          <span class="section-number">01 / APRESENTAÇÃO</span>
+          <h2 class="section-title">
+            UM POUCO<br>SOBRE MIM.
+          </h2>
+        </header>
+
+        <div class="about-content-grid">
+          <!-- Coluna de Texto Principal -->
+          <div class="about-bio-column reveal-item">
+            <p class="lead-paragraph">
+              Sou Alessa Rovigatti, estudante de tecnologia e gosto de transformar o que aprendo em projetos. Tenho interesse por desenvolvimento web, programação, redes de computadores, segurança da informação e design. Durante meus estudos, venho desenvolvendo projetos que me ajudam a colocar meus conhecimentos em prática e aprender novas ferramentas.
+            </p>
+
+            <div class="about-philosophy-card">
+              <span class="philosophy-title">FOCO DE APRENDIZADO</span>
+              <p class="philosophy-text">
+                Prática orientada a projetos reais: unir lógica estruturada, boas práticas de versionamento no Git, arquitetura semântica e interfaces agradáveis ao olhar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna de Habilidades Editoriais -->
+          <div class="skills-editorial-column reveal-item">
+            <div class="skills-editorial-header">
+              <h3 class="skills-subtitle">MINHAS HABILIDADES</h3>
+              <span class="skills-caption">Ferramentas, linguagens e conceitos aplicados</span>
+            </div>
+
+            <div class="skills-matrix">
+              <!-- Habilidade 01 -->
+              <div class="skill-row">
+                <span class="skill-index">01</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Python</strong>
+                  <span class="skill-role">Lógica de programação e automações</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 02 -->
+              <div class="skill-row">
+                <span class="skill-index">02</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Git e GitHub</strong>
+                  <span class="skill-role">Controle de versão e trabalho em equipe</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 03 -->
+              <div class="skill-row">
+                <span class="skill-index">03</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Vercel</strong>
+                  <span class="skill-role">Deploy ágil e hospedagem de aplicações web</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 04 -->
+              <div class="skill-row">
+                <span class="skill-index">04</span>
+                <div class="skill-info">
+                  <strong class="skill-name">HTML & CSS</strong>
+                  <span class="skill-role">Estruturação semântica, responsividade e layout</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 05 -->
+              <div class="skill-row">
+                <span class="skill-index">05</span>
+                <div class="skill-info">
+                  <strong class="skill-name">JavaScript</strong>
+                  <span class="skill-role">Interatividade dinâmica e manipulação do DOM</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 06 -->
+              <div class="skill-row">
+                <span class="skill-index">06</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Diagramas de Redes</strong>
+                  <span class="skill-role">Mapeamento e topologias de infraestrutura</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 07 -->
+              <div class="skill-row">
+                <span class="skill-index">07</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Design de Interfaces</strong>
+                  <span class="skill-role">Hierarquia tipográfica, contraste e espaçamento</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 08 -->
+              <div class="skill-row">
+                <span class="skill-index">08</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Desenvolvimento Web</strong>
+                  <span class="skill-role">Aplicações completas integrando front-end e rotas</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+
+              <!-- Habilidade 09 -->
+              <div class="skill-row">
+                <span class="skill-index">09</span>
+                <div class="skill-info">
+                  <strong class="skill-name">Noções de Segurança da Informação</strong>
+                  <span class="skill-role">Princípios de proteção, integridade e boas práticas</span>
+                </div>
+                <span class="skill-dot" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: PROJETOS SELECIONADOS (GALERIA EDITORIAL ASSIMÉTRICA) -->
+    <section id="projetos" class="projects-section" aria-label="Projetos Selecionados">
+      <div class="container projects-container">
+        
+        <header class="section-header projects-header reveal-item">
+          <div class="header-pre-title">
+            <span class="section-number">02 / TRABALHOS</span>
+            <span class="projects-count">5 PROJETOS DOCUMENTADOS</span>
+          </div>
+          <h2 class="section-title">
+            PROJETOS<br>SELECIONADOS.
+          </h2>
+          <p class="section-subtitle">
+            Alguns dos projetos que desenvolvi durante meus estudos.
+          </p>
+        </header>
+
+        <!-- Galeria Editorial Alternada com Imagens Reais -->
+        <div class="projects-gallery">
+
+          <!-- PROJETO 01: TCC Andermaq -->
+          <article class="project-editorial-card project-layout-wide reveal-item" id="projeto-01">
+            <div class="project-meta-col">
+              <span class="project-num">01</span>
+              <span class="project-category">Desenvolvimento web / TCC</span>
+              <h3 class="project-title">TCC Andermaq</h3>
+              <p class="project-description">
+                Projeto de conclusão de curso voltado ao desenvolvimento de um site para a empresa Andermaq, com apresentação de produtos e serviços e funcionalidades para facilitar o contato com os clientes.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/38041/TCC2" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="Acessar repositório do TCC Andermaq no GitHub">
+                  <span>VER CÓDIGO NO GITHUB</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-media-col">
+              <a href="https://github.com/38041/TCC2" target="_blank" rel="noopener noreferrer" class="project-image-wrapper" aria-label="Visualizar TCC Andermaq">
+                <img src="assets/images/projeto-andermaq.png" alt="Interface real do site da Andermaq desenvolvido como projeto de conclusão de curso" class="project-img" loading="lazy">
+                <div class="project-hover-pill">
+                  <span>REPOSITÓRIO GITHUB</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 02: Site Jadlog -->
+          <article class="project-editorial-card project-layout-reversed reveal-item" id="projeto-02">
+            <div class="project-media-col">
+              <a href="https://jadlog-iq8e.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-wrapper" aria-label="Acessar demonstração do Site Jadlog">
+                <img src="assets/images/projeto-jadlog.png" alt="Interface real da página Jadlog focada em organização de conteúdo e navegação" class="project-img" loading="lazy">
+                <div class="project-hover-pill">
+                  <span>VER PROJETO ONLINE</span>
+                </div>
+              </a>
+            </div>
+            <div class="project-meta-col">
+              <span class="project-num">02</span>
+              <span class="project-category">Desenvolvimento web</span>
+              <h3 class="project-title">Site Jadlog</h3>
+              <p class="project-description">
+                Desenvolvimento de uma página web com foco na organização das informações, apresentação visual e navegação.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://jadlog-iq8e.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="Visualizar site Jadlog publicado">
+                  <span>VISUALIZAR PROJETO</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 03: Landing Page iFood -->
+          <article class="project-editorial-card reveal-item" id="projeto-03">
+            <div class="project-meta-col">
+              <span class="project-num">03</span>
+              <span class="project-category">Interface web</span>
+              <h3 class="project-title">Landing Page iFood</h3>
+              <p class="project-description">
+                Criação de uma landing page inspirada no iFood, trabalhando estrutura de página, elementos visuais e organização do conteúdo.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Design de Interface</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://lp-ifood-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="Visualizar landing page inspirada no iFood">
+                  <span>VISUALIZAR PROJETO</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-media-col">
+              <a href="https://lp-ifood-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-wrapper" aria-label="Acessar projeto iFood">
+                <img src="assets/images/projeto-ifood.png" alt="Interface real da landing page inspirada no iFood com paleta temática e grid de produtos" class="project-img" loading="lazy">
+                <div class="project-hover-pill">
+                  <span>VER PROJETO ONLINE</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJETO 04: Currículo Online -->
+          <article class="project-editorial-card project-layout-reversed reveal-item" id="projeto-04">
+            <div class="project-media-col">
+              <a href="https://curr-culo-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-wrapper" aria-label="Acessar currículo online">
+                <img src="assets/images/projeto-curriculo.png" alt="Interface real do currículo digital online com histórico acadêmico e dados de contato" class="project-img" loading="lazy">
+                <div class="project-hover-pill">
+                  <span>VER PROJETO ONLINE</span>
+                </div>
+              </a>
+            </div>
+            <div class="project-meta-col">
+              <span class="project-num">04</span>
+              <span class="project-category">Portfólio / Desenvolvimento web</span>
+              <h3 class="project-title">Currículo Online</h3>
+              <p class="project-description">
+                Desenvolvimento de um currículo digital para apresentar informações pessoais, habilidades e experiências de estudo em um formato online.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Layout Responsivo</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://curr-culo-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="Visualizar currículo online publicado">
+                  <span>VISUALIZAR PROJETO</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 05: Carrinho de Compras -->
+          <article class="project-editorial-card reveal-item" id="projeto-05">
+            <div class="project-meta-col">
+              <span class="project-num">05</span>
+              <span class="project-category">Desenvolvimento de aplicações</span>
+              <h3 class="project-title">Carrinho de Compras</h3>
+              <p class="project-description">
+                Criação de uma interface de carrinho de compras, com foco na apresentação dos produtos e na interação do usuário com a aplicação.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Interatividade DOM</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://react-cart-o-digital.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="Visualizar carrinho de compras digital">
+                  <span>VISUALIZAR PROJETO</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-media-col">
+              <a href="https://react-cart-o-digital.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-wrapper" aria-label="Acessar projeto de carrinho">
+                <img src="assets/images/projeto-carrinho.png" alt="Interface real da aplicação de carrinho de compras digital com cálculo e lista de itens" class="project-img" loading="lazy">
+                <div class="project-hover-pill">
+                  <span>VER PROJETO ONLINE</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ÁREA COMPLEMENTAR: OUTROS ESTUDOS E PROJETOS -->
+        <aside class="other-studies-section reveal-item" aria-label="Outros Estudos e Projetos Acadêmicos">
+          <div class="other-studies-header">
+            <span class="other-studies-kicker">PESQUISA & LABORATÓRIO</span>
+            <h3 class="other-studies-title">OUTROS ESTUDOS E PROJETOS</h3>
+            <p class="other-studies-subtitle">
+              Módulos técnicos em andamento e documentações de suporte para futuras publicações.
+            </p>
+          </div>
+
+          <div class="other-studies-grid">
+            <div class="study-card">
+              <div class="study-card-header">
+                <span class="study-code">ET-01</span>
+                <span class="study-badge">EM CURSO</span>
+              </div>
+              <h4 class="study-name">Redes de computadores</h4>
+              <p class="study-desc">
+                Estudos sobre protocolos TCP/IP, roteamento, endereçamento IPv4/IPv6, serviços DHCP/DNS e modelos de arquitetura cliente-servidor.
+              </p>
+            </div>
+
+            <div class="study-card">
+              <div class="study-card-header">
+                <span class="study-code">ET-02</span>
+                <span class="study-badge">EM CURSO</span>
+              </div>
+              <h4 class="study-name">Programação</h4>
+              <p class="study-desc">
+                Estruturas de dados fundamentais, algoritmos de ordenação, automação com scripts Python e manipulação modular de arquivos.
+              </p>
+            </div>
+
+            <div class="study-card">
+              <div class="study-card-header">
+                <span class="study-code">ET-03</span>
+                <span class="study-badge">EM CURSO</span>
+              </div>
+              <h4 class="study-name">Segurança da informação</h4>
+              <p class="study-desc">
+                Práticas defensivas, noções de criptografia, autenticação segura, prevenção a vulnerabilidades web e conscientização digital.
+              </p>
+            </div>
+
+            <div class="study-card">
+              <div class="study-card-header">
+                <span class="study-code">ET-04</span>
+                <span class="study-badge">EM CURSO</span>
+              </div>
+              <h4 class="study-name">Diagramas de redes</h4>
+              <p class="study-desc">
+                Elaboração de esquemas topológicos em ferramentas de diagramação, representação visual de switches, roteadores e segmentação VLAN.
+              </p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: CONTATO -->
+    <section id="contato" class="contact-section" aria-label="Informações de Contato">
+      <div class="container contact-container">
+
+        <div class="contact-editorial-header reveal-item">
+          <span class="section-number">03 / CONEXÃO</span>
+          <h2 class="section-title">
+            VAMOS<br>CONVERSAR?
+          </h2>
+          <p class="lead-paragraph contact-lead">
+            Gostou dos meus projetos ou quer entrar em contato? Você pode me encontrar pelos links abaixo.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Coluna 1: Dados Diretos Oficiais -->
+          <div class="contact-info-col reveal-item">
+            <h3 class="contact-col-title">CANAIS DIRETOS</h3>
+            
+            <div class="contact-direct-cards">
+              <!-- Card GitHub -->
+              <a href="https://github.com/38041" target="_blank" rel="noopener noreferrer" class="contact-direct-item" aria-label="Visitar perfil de Alessa Rovigatti no GitHub (abre em nova guia)">
+                <div class="direct-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <div class="direct-text">
+                  <span class="direct-label">GITHUB</span>
+                  <strong class="direct-value">github.com/38041</strong>
+                </div>
+                <svg class="direct-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <!-- Card E-mail -->
+              <a href="mailto:38041@raphaeldisanto.com.br" class="contact-direct-item" aria-label="Enviar e-mail para Alessa Rovigatti">
+                <div class="direct-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="direct-text">
+                  <span class="direct-label">E-MAIL INSTITUCIONAL</span>
+                  <strong class="direct-value">38041@raphaeldisanto.com.br</strong>
+                </div>
+                <svg class="direct-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="location-note">
+              <span class="location-dot" aria-hidden="true"></span>
+              <span>Campinas & Região Metropolitana — SP</span>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Formulário com Validação Real e Transparência -->
+          <div class="contact-form-col reveal-item">
+            <h3 class="contact-col-title">ENVIE UMA MENSAGEM</h3>
+            
+            <form id="contact-form" class="editorial-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Seu Nome *</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Como prefere ser chamado(a)?" required autocomplete="name">
+                <span class="form-error-msg" id="name-error">Por favor, preencha o seu nome.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Seu E-mail *</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="exemplo@dominio.com" required autocomplete="email">
+                <span class="form-error-msg" id="email-error">Informe um endereço de e-mail válido.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Mensagem *</label>
+                <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Escreva aqui sua mensagem ou proposta..." required></textarea>
+                <span class="form-error-msg" id="message-error">Por favor, escreva sua mensagem.</span>
+              </div>
+
+              <button type="submit" id="form-submit-btn" class="btn-submit-editorial">
+                <span>ENVIAR MENSAGEM</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+
+              <div id="form-status" class="form-status-box" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Editorial Discreto -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">ALESSA ROVIGATTI</span>
+        <span class="footer-copy">© 2026. Portfólio autoral desenvolvido com atenção ao detalhe e código limpo.</span>
+      </div>
+
+      <div class="footer-right">
+        <ul class="footer-nav">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#inicio" class="back-to-top" aria-label="Voltar ao início da página">
+          <span>VOLTAR AO TOPO</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
